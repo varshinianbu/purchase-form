@@ -14,7 +14,7 @@
 
   <body>
 
-	<form  action = "#" method = "get">
+	<form action = "#" method = "get" onsubmit="return checkEmails()">
 	<fieldset>
 		<legend>Your details</legend>
 		<ol>
@@ -56,7 +56,7 @@
 				class="bfh-countries" data-country="US" required></li>
      	</ol>
     </fieldset>
-    <input type = "checkbox" id = "useSame"><label for="useSame">Use Same address for Billing?</label>
+    <input type = "checkbox" id = "useSame" onclick="sameAddress(this)"><label for="useSame">Use Same address for Billing?</label>
     <fieldset>
 		<legend>Billing address</legend>
 		<ol>
