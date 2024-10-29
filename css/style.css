@@ -8,25 +8,6 @@ body {
 	color: #111111;
 	font-family: Georgia, "Times New Roman", Times, serif;
 	padding: .5%;
-
-	form ol li:last-child {
-		border-bottom-left-radius: 25px;
-		border-bottom-right-radius: 25px;
-		padding-bottom: 25px;
-	}
-	form ol li:first-child {
-		border-top-left-radius: 25px;
-		border-top-right-radius: 25px;
-	}
-	
-	input[type = "radio"] {
-		display: inline;
-		width: auto;
-	}
-	label, input {
-		display: block;
-		width: 85%;
-	}
 }
 
 form{
@@ -97,9 +78,43 @@ form label[for=mastercard] {
 /*** BEGIN HERE ***/
 /*Make sure to comment out line 32 above*/
 
+form ol li:first-child{
+	border-top-left-radius:  25px;
+	border-top-right-radius:  25px;	
+}
 
+form ol li:last-child{
+	border-bottom-left-radius:  25px;
+	border-bottom-right-radius:  25px;	
+	padding-bottom: 25px;
+}
 
+label,input{
+	display:block;
+	width:85%
+}
+input[type="radio"]{
+	width: auto;
+	display: inline;
+}
 
+.form-control{
+	width:85%;
+}
 
+button{
+	cursor:wait;
+}
 
+@media screen and (prefers-reduced-motion){
+	button{
+		cursor:crosshair;
+	}
+}
+
+/* This next rule is because the label is a parent rather than a sibling */
+/* I had to use Inspect Element to really figure this out. */ 
+label .form-control{
+	width:100%;
+}
 /*** END HERE ***/
